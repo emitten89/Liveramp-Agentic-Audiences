@@ -1,0 +1,14 @@
+# Copy to terraform.tfvars and fill in. Never commit terraform.tfvars itself
+# (it's gitignored) since it can carry account IDs and internal hostnames.
+
+aws_region               = "us-east-1"
+aws_account_id           = "111111111111"
+databricks_workspace_url = "https://dbc-xxxxxxxx-xxxx.cloud.databricks.com"
+databricks_account_id    = "00000000-0000-0000-0000-000000000000"
+
+landing_bucket_name = "liveramp-agentic-audiences-dev-landing"
+catalog_name        = "liveramp_agentic_audiences"
+schema_name         = "dev"
+
+# Leave blank for the first `terraform apply`. See iam.tf / README.md.
+unity_catalog_external_id = ""
